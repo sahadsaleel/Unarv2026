@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;700&family=Poppins:wght@300;400;600;700;800&family=Amiri:wght@400;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #1a3a2a;
+  /* Deep Islamic Green */
+  --gold: #c8a84b;
+  /* Islamic Gold */
+  --cream: #fdf6e3;
+  /* Parchment */
+  --dark: #0d1f17;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  body {
+    @apply font-poppins overflow-x-hidden text-slate-800;
+    background-color: var(--cream);
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-8 py-3 font-bold rounded-full transition-all duration-300 shadow-md active:scale-95;
+    background-color: var(--primary);
+    color: var(--gold);
+    border: 1px solid rgba(200, 168, 75, 0.3);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--dark);
+    box-shadow: 0 8px 20px rgba(200, 168, 75, 0.2);
+  }
+
+  .btn-gold {
+    @apply px-8 py-3 font-bold rounded-full transition-all duration-300 active:scale-95;
+    background-color: var(--gold);
+    color: var(--primary);
+    box-shadow: 0 4px 16px rgba(200, 168, 75, 0.35);
+  }
+
+  .btn-gold:hover {
+    filter: brightness(1.1);
+  }
+
+  .section-padding {
+    @apply py-16 md:py-28;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-bold text-center;
+    font-family: 'Amiri', serif;
+  }
+
+  .gold-divider {
+    @apply flex items-center justify-center gap-4 my-6;
+  }
+
+  .gold-divider::before,
+  .gold-divider::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    max-width: 20rem;
+    background: linear-gradient(to right, transparent, var(--gold), transparent);
+  }
+}
+
+/* ─── Islamic Geometric SVG Pattern ─── */
+.pattern-bg {
+  background-color: #0d1f17;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c8a84b' stroke-width='0.5' opacity='0.3'%3E%3Cpolygon points='40,5 55,25 75,25 62,40 70,60 40,50 10,60 18,40 5,25 25,25'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+.pattern-bg-light {
+  background-color: #fdf6e3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c8a84b' stroke-width='0.5' opacity='0.2'%3E%3Cpolygon points='40,5 55,25 75,25 62,40 70,60 40,50 10,60 18,40 5,25 25,25'/%3E%3Ccircle cx='40' cy='40' r='12'/%3E%3C/g%3E%3C/svg%3E");
+  background-size: 80px 80px;
+}
+
+/* ─── Islamic Arch Frame ─── */
+.arch-top {
+  clip-path: ellipse(100% 100% at 50% 100%);
+}
+
+/* ─── Gold shimmer text ─── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #c8a84b 0%, #f5d78e 50%, #c8a84b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Mosque silhouette overlay ─── */
+.mosque-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%230d1f17' fill-opacity='0.8' d='M0,288 C60,260 120,240 180,260 L180,200 L190,200 L190,160 Q200,100 210,160 L210,200 L220,200 L220,260 C280,240 340,260 400,280 C460,300 520,260 580,240 L580,190 L590,190 L590,140 Q600,80 610,140 L610,190 L620,190 L620,240 C680,260 740,300 800,280 C860,260 920,240 980,260 L980,200 L990,200 L990,160 Q1000,100 1010,160 L1010,200 L1020,200 L1020,260 C1080,280 1140,300 1200,280 L1200,288 L1440,288 L1440,320 L0,320 Z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% auto;
+}
+
+/* ─── Card styles ─── */
+.islamic-card {
+  @apply bg-white rounded-3xl shadow-lg transition-all duration-300 overflow-hidden;
+  border: 1px solid rgba(200, 168, 75, 0.2);
+}
+
+.islamic-card:hover {
+  box-shadow: 0 20px 40px rgba(200, 168, 75, 0.1);
+}
+
+/* ─── Borders ─── */
+.border-gold {
+  border-color: #c8a84b;
+}
