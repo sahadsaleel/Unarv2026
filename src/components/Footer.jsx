@@ -99,10 +99,10 @@ const Footer = () => {
                     {/* Sponsor */}
                     <div>
                         <h4 style={{ color: GOLD, fontWeight: 700, fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px' }}>Principal Sponsor</h4>
-                        <div style={{ background: 'white', borderRadius: '16px', padding: '12px 16px', display: 'inline-block', boxShadow: '0 4px 16px rgba(0,0,0,0.3)' }}>
-                            <img src={sponsorLogo} alt="Global Travel & Tourism" style={{ width: '140px', height: 'auto', objectFit: 'contain', display: 'block' }} />
+                        <div style={{ padding: '12px 0' }}>
+                            <h5 style={{ color: 'white', fontFamily: "'Amiri', serif", fontSize: '18px', margin: 0 }}>Global Travel & Tourism</h5>
                         </div>
-                        <p style={{ color: 'rgba(200,168,75,0.4)', fontSize: '11px', marginTop: '10px' }}>KSA • UAE • India</p>
+                        <p style={{ color: 'rgba(200,168,75,0.4)', fontSize: '11px', marginTop: '5px' }}>KSA • UAE • India</p>
                     </div>
                 </div>
 

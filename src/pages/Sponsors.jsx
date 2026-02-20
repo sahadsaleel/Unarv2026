@@ -4,6 +4,12 @@ import { Globe, Plane, ShieldCheck, Phone } from 'lucide-react'
 import sponsorLogo from '../assets/images1.jpg'
 import sponsorPoster from '../assets/images2.jpg'
 
+import sponcer1 from '../assets/sponcer1.jpg'
+import sponcer2 from '../assets/sponcer2.jpg'
+import sponcer3 from '../assets/sponcer3.jpg'
+import sponcer4 from '../assets/sponcer4.jpg'
+import sponcer5 from '../assets/sponcer5.jpg'
+
 const StarSvg = ({ className }) => (
     <svg viewBox="0 0 40 40" className={className}>
         <polygon points="20,2 24,16 38,16 27,25 31,38 20,30 9,38 13,25 2,16 16,16" fill="currentColor" />
@@ -91,6 +97,34 @@ const Sponsors = () => {
                                 <p className="text-white/70">+966 56 985 3924</p>
                             </div>
                         </motion.div>
+                    </div>
+                </div>
+            </section>
+
+            {/* All Sponsors Grid */}
+            <section className="section-padding bg-cream">
+                <div className="max-w-7xl mx-auto px-4">
+                    <div className="text-center mb-12">
+                        <h2 className="section-title text-primary mb-4">Our Partners</h2>
+                        <div className="gold-divider"><span className="text-gold">✦</span></div>
+                    </div>
+
+                    <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5].map((img, i) => (
+                            <motion.div
+                                key={i}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                className="bg-white p-6 rounded-xl shadow-md border border-gold/10 flex items-center justify-center hover:shadow-lg transition-all"
+                            >
+                                <img
+                                    src={img}
+                                    alt={`Sponsor ${i + 1}`}
+                                    className="max-h-24 w-auto object-contain grayscale hover:grayscale-0 transition-all duration-300"
+                                />
+                            </motion.div>
+                        ))}
                     </div>
                 </div>
             </section>

@@ -6,6 +6,12 @@ import sponsorLogo from '../assets/images1.jpg'
 import sponsorPoster from '../assets/images2.jpg'
 import singerImage from '../assets/images3.png'
 
+import sponcer1 from '../assets/sponcer1.jpg'
+import sponcer2 from '../assets/sponcer2.jpg'
+import sponcer3 from '../assets/sponcer3.jpg'
+import sponcer4 from '../assets/sponcer4.jpg'
+import sponcer5 from '../assets/sponcer5.jpg'
+
 /* ─── Reusable small components ─── */
 const GoldStar = ({ size = 20 }) => (
     <svg viewBox="0 0 40 40" width={size} height={size} style={{ display: 'inline-block' }}>
@@ -107,7 +113,7 @@ const Home = () => {
                             Unarv
                         </h1>
                         <div style={{ color: 'rgba(255,255,255,0.4)', fontSize: 'clamp(22px, 4vw, 38px)', fontFamily: "'Noto Sans Malayalam', sans-serif", marginBottom: '8px' }}>
-                            ഉണർവ്
+                            ഉണർവ്വ്
                         </div>
                         <div style={{ color: 'rgba(200,168,75,0.5)', fontSize: '20px', fontWeight: 700, letterSpacing: '0.3em' }}>
                             ── 2026 ──
@@ -386,23 +392,26 @@ const Home = () => {
             }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', textAlign: 'center' }}>
                     <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>Principal Sponsor</p>
-                    <div style={{ display: 'flex', alignItems: 'center', gap: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                        {/* Logo */}
-                        <div style={{ background: 'white', padding: '20px 36px', borderRadius: '20px', boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                        {/* Core Logo */}
+                        <div style={{ background: 'white', padding: '20px', borderRadius: '20px', boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}>
                             <img
                                 src={sponsorLogo}
                                 alt="Global Travel & Tourism"
-                                style={{ height: '72px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                                style={{ height: '64px', width: 'auto', objectFit: 'contain', display: 'block' }}
                             />
                         </div>
-                        {/* Poster preview */}
-                        <div style={{ borderRadius: '20px', overflow: 'hidden', boxShadow: '0 8px 32px rgba(0,0,0,0.4)', border: '2px solid rgba(200,168,75,0.2)' }}>
-                            <img
-                                src={sponsorPoster}
-                                alt="Global Travel & Tourism — Explore the Globe"
-                                style={{ height: '160px', width: 'auto', objectFit: 'cover', display: 'block' }}
-                            />
-                        </div>
+
+                        {/* New Sponsors */}
+                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5].map((img, i) => (
+                            <div key={i} style={{ background: 'white', padding: '12px', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.2)' }}>
+                                <img
+                                    src={img}
+                                    alt={`Sponsor ${i + 1}`}
+                                    style={{ height: '48px', width: 'auto', objectFit: 'contain', display: 'block' }}
+                                />
+                            </div>
+                        ))}
                     </div>
                     <p style={{ color: 'rgba(200,168,75,0.5)', fontSize: '13px', fontWeight: 600 }}>
                         Global Travel &amp; Tourism — KSA · UAE · India

@@ -20,7 +20,7 @@ const About = () => {
                     <h1 className="section-title text-white mb-4">About Unarv 2026</h1>
                     <div className="gold-divider"><span className="text-gold">✦</span></div>
                     <p className="text-xl text-white/70 max-w-2xl mx-auto">
-                        ഉണർവ് — An Awakening of Culture, Music & Community Spirit
+                        ഉണർവ്വ് — An Awakening of Culture, Music & Community Spirit
                     </p>
                 </div>
                 {/* mosque silhouette */}
@@ -40,7 +40,7 @@ const About = () => {
                             <h2 className="text-3xl font-bold text-primary font-amiri mb-6">What is Unarv?</h2>
                             <div className="space-y-5 text-slate-600 leading-relaxed text-lg">
                                 <p>
-                                    "Unarv" — a revival of our cultural roots and a celebration of the melodies that bind the Malayali diaspora together.
+                                    "ഉണർവ്വ്" — a revival of our cultural roots and a celebration of the melodies that bind the Malayali diaspora together.
                                 </p>
                                 <p>
                                     As the flagship event of Riyadh KMCC Thavanur Niyojaka Mandalam Samelanam, Unarv 2026 brings together the very best in Malayalam music with a soul-stirring live performance by the legendary A. P. Sidhique.
