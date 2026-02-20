@@ -413,10 +413,6 @@ const Home = () => {
                             </div>
                         ))}
                     </div>
-                    <p style={{ color: 'rgba(200,168,75,0.5)', fontSize: '13px', fontWeight: 600 }}>
-                        Global Travel &amp; Tourism — KSA · UAE · India
-                    </p>
-                    <p style={{ color: 'rgba(255,255,255,0.25)', fontSize: '12px' }}>+966 56 488 5282 &nbsp;|&nbsp; +966 56 985 3924</p>
                 </div>
             </section>
 
