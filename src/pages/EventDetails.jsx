@@ -41,11 +41,6 @@ const EventDetails = () => {
                                     title: 'Where',
                                     lines: ['Dimora Hotel, Riyadh', 'Kingdom of Saudi Arabia']
                                 },
-                                {
-                                    Icon: Info,
-                                    title: 'Entry',
-                                    lines: ['By invitation / registration', 'Contact the committee', 'for your pass']
-                                },
                             ].map(({ Icon, title, lines }, i) => (
                                 <motion.div
                                     key={i}

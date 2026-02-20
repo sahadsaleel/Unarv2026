@@ -69,13 +69,9 @@ const Contact = () => {
                             {
                                 icon: <Phone size={28} />,
                                 title: 'Phone',
-                                lines: ['+966 5XX XXX XXX', '+966 5YY YYY YYY'],
+                                lines: ['+966 59 002 6254', '+966 56 604 6933'],
                             },
-                            {
-                                icon: <Mail size={28} />,
-                                title: 'Email',
-                                lines: ['info@kmccriyadh.org', 'events@thavanur.kmcc'],
-                            },
+
                         ].map(({ icon, title, lines }, i) => (
                             <motion.div key={i} {...fadeUp(i * 0.1)}
                                 style={{
@@ -98,54 +94,6 @@ const Contact = () => {
                             </motion.div>
                         ))}
                     </div>
-
-                    {/* Quick Connect */}
-                    <motion.div {...fadeUp(0.3)}
-                        style={{
-                            background: PRIMARY, borderRadius: '28px', padding: '48px 32px', textAlign: 'center',
-                            backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23c8a84b' stroke-width='0.5' opacity='0.15'%3E%3Cpolygon points='40,5 55,25 75,25 62,40 70,60 40,50 10,60 18,40 5,25 25,25'/%3E%3C/g%3E%3C/svg%3E")`,
-                        }}
-                    >
-                        <p style={{ color: 'rgba(200,168,75,0.6)', fontWeight: 700, fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '12px' }}>
-                            Connect Directly
-                        </p>
-                        <h3 style={{ fontFamily: "'Amiri', serif", color: 'white', fontSize: '32px', fontWeight: 700, margin: '0 0 8px' }}>
-                            Reach Us on Social
-                        </h3>
-                        <p style={{ color: 'rgba(255,255,255,0.45)', fontSize: '15px', marginBottom: '32px' }}>
-                            Our committee is available on WhatsApp and Telegram for quick support.
-                        </p>
-                        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-                            <a
-                                href="https://wa.me/9665XXXXXXXX"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
-                                    backgroundColor: '#25D366', color: 'white',
-                                    fontWeight: 700, fontSize: '15px',
-                                    padding: '14px 28px', borderRadius: '999px',
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                <MessageCircle size={20} /> WhatsApp
-                            </a>
-                            <a
-                                href="https://t.me/kmccriyadh"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                style={{
-                                    display: 'inline-flex', alignItems: 'center', gap: '10px',
-                                    backgroundColor: '#0088cc', color: 'white',
-                                    fontWeight: 700, fontSize: '15px',
-                                    padding: '14px 28px', borderRadius: '999px',
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                <Send size={20} /> Telegram
-                            </a>
-                        </div>
-                    </motion.div>
                 </div>
             </section>
 

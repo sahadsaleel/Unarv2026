@@ -155,7 +155,7 @@ const Home = () => {
                         <p style={{ color: '#c8a84b', fontSize: '14px', fontWeight: 600 }}>Renowned Malayalam Singer</p>
                     </motion.div>
 
-                    {/* CTAs */}
+                    {/* CTAs
                     <motion.div
                         initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.8 }}
                         style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}
@@ -177,7 +177,7 @@ const Home = () => {
                         }}>
                             Learn More
                         </Link>
-                    </motion.div>
+                    </motion.div> */}
                 </div>
 
                 {/* Scroll indicator */}

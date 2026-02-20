@@ -87,7 +87,7 @@ const Footer = () => {
                             </li>
                             <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                                 <Phone size={15} style={{ color: GOLD, flexShrink: 0 }} />
-                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px' }}>+966 5XX XXX XXX</span>
+                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px' }}>+966 59 002 6254</span>
                             </li>
                             <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                                 <Mail size={15} style={{ color: GOLD, flexShrink: 0 }} />

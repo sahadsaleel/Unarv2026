@@ -56,8 +56,6 @@ const Sponsors = () => {
                                 alt="Global Travel & Tourism"
                                 className="w-64 h-auto object-contain mx-auto drop-shadow-lg mb-6"
                             />
-                            <h2 className="text-2xl font-black text-primary font-amiri mb-2">Global Travel & Tourism</h2>
-                            <p className="text-gold font-semibold text-sm uppercase tracking-widest">KSA • UAE • India</p>
                         </motion.div>
 
                         {/* Other Sponsors (Now Big) */}
@@ -78,19 +76,6 @@ const Sponsors = () => {
                             </motion.div>
                         ))}
                     </div>
-                </div>
-            </section>
-
-            {/* Become a Sponsor */}
-            <section className="py-20 bg-primary">
-                <div className="absolute inset-0 pattern-bg opacity-20"></div>
-                <div className="relative max-w-3xl mx-auto px-4 text-center">
-                    <StarSvg className="w-10 h-10 text-gold mx-auto mb-6" />
-                    <h2 className="text-3xl font-bold text-white font-amiri mb-4">Become a Sponsor</h2>
-                    <p className="text-white/60 mb-8">
-                        Join Global Travel & Tourism in supporting the Malayali community in Riyadh. Contact our committee for sponsorship packages.
-                    </p>
-                    <a href="/contact" className="btn-gold">Get in Touch</a>
                 </div>
             </section>
         </div>
