@@ -43,7 +43,7 @@ const About = () => {
                                     "ഉണർവ്വ്" — a revival of our cultural roots and a celebration of the melodies that bind the Malayali diaspora together.
                                 </p>
                                 <p>
-                                    As the flagship event of Riyadh KMCC Thavanur Niyojaka Mandalam Samelanam, Unarv 2026 brings together the very best in Malayalam music with a soul-stirring live performance by the legendary A. P. Sidhique.
+                                    As the flagship event of Riyadh KMCC Thavanur Constituency Samelanam, Unarv 2026 brings together the very best in Malayalam music with a soul-stirring live performance by the legendary I. P. Sidhique.
                                 </p>
                                 <p>
                                     This is more than a concert — it is a gathering of hearts, a reminder of home, and an evening that will be etched in memory forever.

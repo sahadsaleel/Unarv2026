@@ -54,7 +54,7 @@ const Contact = () => {
                     <motion.div {...fadeUp()} style={{ textAlign: 'center', marginBottom: '56px' }}>
                         <h2 style={{ fontFamily: "'Amiri', serif", color: PRIMARY, fontSize: '38px', fontWeight: 700, margin: '0 0 6px' }}>KMCC Riyadh</h2>
                         <p style={{ color: GOLD, fontWeight: 700, fontSize: '13px', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                            Thavanur Niyojaka Mandalam Committee
+                            Thavanur Constituency Committee
                         </p>
                     </motion.div>
 
@@ -64,7 +64,7 @@ const Contact = () => {
                             {
                                 icon: <MapPin size={28} />,
                                 title: 'Address',
-                                lines: ['KMCC Riyadh, Thavanur Constituency Hall', 'Riyadh, Kingdom of Saudi Arabia'],
+                                lines: ['Dimora Hotel, Riyadh', 'Kingdom of Saudi Arabia'],
                             },
                             {
                                 icon: <Phone size={28} />,

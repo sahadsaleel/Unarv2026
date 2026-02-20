@@ -128,7 +128,7 @@ const Home = () => {
                         {[
                             { icon: <Calendar size={15} />, text: '21 March 2026 · Saturday' },
                             { icon: <Clock size={15} />, text: '7:00 PM' },
-                            { icon: <MapPin size={15} />, text: 'KMCC Riyadh, Thavanur Hall' },
+                            { icon: <MapPin size={15} />, text: 'Dimora Hotel, Riyadh' },
                         ].map(({ icon, text }, i) => (
                             <div key={i} style={{
                                 display: 'flex', alignItems: 'center', gap: '8px',
@@ -150,7 +150,7 @@ const Home = () => {
                             Chief Performer
                         </p>
                         <h2 style={{ fontFamily: "'Amiri', serif", color: 'white', fontSize: 'clamp(28px, 5vw, 44px)', fontWeight: 700, margin: '0 0 4px 0' }}>
-                            A. P. Sidhique
+                            I. P. Sidhique
                         </h2>
                         <p style={{ color: '#c8a84b', fontSize: '14px', fontWeight: 600 }}>Renowned Malayalam Singer</p>
                     </motion.div>
@@ -204,8 +204,8 @@ const Home = () => {
                         {[
                             { icon: <Calendar size={24} />, label: 'Date', value: '21 March 2026' },
                             { icon: <Clock size={24} />, label: 'Time', value: '7:00 PM' },
-                            { icon: <MapPin size={24} />, label: 'Venue', value: 'KMCC Riyadh' },
-                            { icon: <Mic size={24} />, label: 'Performer', value: 'A. P. Sidhique' },
+                            { icon: <MapPin size={24} />, label: 'Venue', value: 'Dimora Hotel, Riyadh' },
+                            { icon: <Mic size={24} />, label: 'Performer', value: 'I. P. Sidhique' },
                         ].map(({ icon, label, value }, i) => (
                             <div key={i} style={{
                                 backgroundColor: '#1a3a2a',
@@ -239,7 +239,7 @@ const Home = () => {
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
                         {[
-                            { icon: <Music size={32} />, title: 'Live Melodies', body: 'Soul-stirring Malayalam hits performed live by the maestro A. P. Sidhique in one magical evening.' },
+                            { icon: <Music size={32} />, title: 'Live Melodies', body: 'Soul-stirring Malayalam hits performed live by the maestro I. P. Sidhique in one magical evening.' },
                             { icon: <Users size={32} />, title: 'Community Spirit', body: 'Come together with the Malayali diaspora of Riyadh in a powerful celebration of heritage and belonging.' },
                             { icon: <Star size={32} />, title: 'Cultural Heritage', body: 'A curated programme blending devotional music, folk classics, and contemporary hits in an elegant setting.' },
                         ].map(({ icon, title, body }, i) => (
@@ -278,10 +278,10 @@ const Home = () => {
                     {/* Text */}
                     <motion.div {...fadeUp()}>
                         <p style={{ color: '#c8a84b', fontWeight: 700, fontSize: '12px', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '16px' }}>Featured Artist</p>
-                        <h2 style={{ fontFamily: "'Amiri', serif", color: 'white', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 700, margin: '0 0 8px 0' }}>A. P. Sidhique</h2>
+                        <h2 style={{ fontFamily: "'Amiri', serif", color: 'white', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 700, margin: '0 0 8px 0' }}>I. P. Sidhique</h2>
                         <p style={{ color: 'rgba(200,168,75,0.6)', fontFamily: "'Noto Sans Malayalam', sans-serif", marginBottom: '24px', fontSize: '18px' }}>ഏ. പി. സിദ്ദീഖ്</p>
                         <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '16px', lineHeight: 1.8, marginBottom: '32px', maxWidth: '480px' }}>
-                            A household name among Malayalam music lovers, A. P. Sidhique's powerful vocals and emotional depth have captivated audiences across the Middle East and beyond. Unarv 2026 will be his most intimate performance yet in Riyadh.
+                            A household name among Malayalam music lovers, I. P. Sidhique's powerful vocals and emotional depth have captivated audiences across the Middle East and beyond. Unarv 2026 will be his most intimate performance yet in Riyadh.
                         </p>
                         <div style={{ display: 'flex', gap: '32px', marginBottom: '36px' }}>
                             {[{ n: '1000+', l: 'Performances' }, { n: '15+', l: 'Countries' }, { n: '50+', l: 'Awards' }].map(({ n, l }, i) => (
@@ -323,7 +323,7 @@ const Home = () => {
                             />
                             <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '24px', background: 'linear-gradient(to top, rgba(13,31,23,0.95), transparent)' }}>
                                 <p style={{ color: '#c8a84b', fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', marginBottom: '4px' }}>Chief Performer</p>
-                                <p style={{ color: 'white', fontFamily: "'Amiri', serif", fontSize: '22px', fontWeight: 700, margin: 0 }}>A. P. Sidhique</p>
+                                <p style={{ color: 'white', fontFamily: "'Amiri', serif", fontSize: '22px', fontWeight: 700, margin: 0 }}>I. P. Sidhique</p>
                                 <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', marginTop: '2px' }}>Malayalam Playback Singer</p>
                             </div>
                         </div>
@@ -354,7 +354,7 @@ const Home = () => {
                             Riyadh KMCC
                         </h3>
                         <p style={{ color: '#c8a84b', fontWeight: 600, fontSize: '15px', marginBottom: '20px', letterSpacing: '0.05em' }}>
-                            Thavanur Niyojaka Mandalam Committee
+                            Thavanur Constituency Committee
                         </p>
                         <GoldDivider />
                         <p style={{ color: '#6b7280', fontSize: '16px', lineHeight: 1.8, margin: '20px 0 32px' }}>
@@ -391,7 +391,7 @@ const Home = () => {
                 borderTop: '1px solid rgba(200,168,75,0.15)',
             }}>
                 <div style={{ maxWidth: '1280px', margin: '0 auto', display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '20px', textAlign: 'center' }}>
-                    <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>Principal Sponsor</p>
+                    <p style={{ color: 'rgba(255,255,255,0.3)', fontSize: '11px', letterSpacing: '0.25em', textTransform: 'uppercase' }}>Our Partners</p>
                     <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap', justifyContent: 'center' }}>
                         {/* Core Logo */}
                         <div style={{ background: 'white', padding: '20px', borderRadius: '20px', boxShadow: '0 4px 24px rgba(0,0,0,0.3)' }}>

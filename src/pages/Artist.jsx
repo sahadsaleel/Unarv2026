@@ -11,8 +11,8 @@ const Artist = () => {
                 <div className="absolute inset-0 bg-gradient-to-b from-dark via-dark/80 to-dark/60"></div>
                 <div className="relative z-10 max-w-7xl mx-auto px-4 text-center">
                     <p className="text-gold text-sm uppercase tracking-[0.3em] font-bold mb-4">Chief Performer</p>
-                    <h1 className="text-6xl md:text-8xl font-black text-white font-amiri mb-3">A. P. Sidhique</h1>
-                    <div className="text-gold/50 text-lg">ഏ. പി. സിദ്ദീഖ്</div>
+                    <h1 className="text-6xl md:text-8xl font-black text-white font-amiri mb-3">I. P. Sidhique</h1>
+                    <div className="text-gold/50 text-lg">ഐ. പി. സിദ്ദീഖ്</div>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 mosque-overlay h-32 opacity-40"></div>
             </section>
@@ -34,12 +34,12 @@ const Artist = () => {
                                 <div className="relative rounded-[2.5rem] overflow-hidden border-4 border-gold/20 bg-primary aspect-[4/5] flex flex-col items-center justify-center shadow-2xl">
                                     <img
                                         src={singerImage}
-                                        alt="A. P. Sidhique"
+                                        alt="I. P. Sidhique"
                                         className="w-100 h-100 object-cover absolute inset-0"
                                     />
                                     <div className="absolute bottom-0 inset-x-0 bg-gradient-to-t from-dark p-8">
                                         <p className="text-gold text-xs uppercase tracking-widest mb-1">Chief Performer</p>
-                                        <h3 className="text-white text-2xl font-bold font-amiri">A. P. Sidhique</h3>
+                                        <h3 className="text-white text-2xl font-bold font-amiri">I. P. Sidhique</h3>
                                         <p className="text-white/50 text-sm">Renowned Malayalam Playback Singer</p>
                                     </div>
                                 </div>
@@ -53,7 +53,7 @@ const Artist = () => {
                             </span>
                             <h2 className="text-4xl font-bold font-amiri text-primary mb-6">The Voice That Moves Hearts</h2>
                             <p className="text-slate-600 text-lg leading-relaxed mb-6">
-                                A. P. Sidhique is a celebrated Malayalam singer and stage performer with an extraordinary ability to connect emotionally with his audience. His voice carries warmth, soul, and a depth of feeling that transcends language.
+                                I. P. Sidhique is a celebrated Malayalam singer and stage performer with an extraordinary ability to connect emotionally with his audience. His voice carries warmth, soul, and a depth of feeling that transcends language.
                             </p>
                             <p className="text-slate-500 leading-relaxed mb-10">
                                 Having performed across the Gulf region, India, and Europe, his expansive repertoire spans Sufi devotional music, folk ballads, film hits, and contemporary pop. His performance at Unarv 2026 promises to be an evening of pure musical magic for the Malayali community in Riyadh.

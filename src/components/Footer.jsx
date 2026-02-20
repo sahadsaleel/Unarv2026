@@ -83,7 +83,7 @@ const Footer = () => {
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
                             <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                                 <MapPin size={15} style={{ color: GOLD, marginTop: '2px', flexShrink: 0 }} />
-                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', lineHeight: 1.5 }}>KMCC Riyadh, Thavanur Constituency Hall, Kingdom of Saudi Arabia</span>
+                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', lineHeight: 1.5 }}>Dimora Hotel, Riyadh, Kingdom of Saudi Arabia</span>
                             </li>
                             <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                                 <Phone size={15} style={{ color: GOLD, flexShrink: 0 }} />
@@ -98,7 +98,7 @@ const Footer = () => {
 
                     {/* Sponsor */}
                     <div>
-                        <h4 style={{ color: GOLD, fontWeight: 700, fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px' }}>Principal Sponsor</h4>
+                        <h4 style={{ color: GOLD, fontWeight: 700, fontSize: '12px', letterSpacing: '0.15em', textTransform: 'uppercase', marginBottom: '20px' }}>Our Partners</h4>
                         <div style={{ padding: '12px 0' }}>
                             <h5 style={{ color: 'white', fontFamily: "'Amiri', serif", fontSize: '18px', margin: 0 }}>Global Travel & Tourism</h5>
                         </div>

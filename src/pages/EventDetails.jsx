@@ -39,7 +39,7 @@ const EventDetails = () => {
                                 {
                                     Icon: MapPin,
                                     title: 'Where',
-                                    lines: ['KMCC Riyadh', 'Thavanur Constituency Hall', 'Kingdom of Saudi Arabia']
+                                    lines: ['Dimora Hotel, Riyadh', 'Kingdom of Saudi Arabia']
                                 },
                                 {
                                     Icon: Info,
@@ -84,9 +84,9 @@ const EventDetails = () => {
                                         { time: '6:30 PM', event: 'Doors Open', desc: 'Guest registration and seating' },
                                         { time: '7:00 PM', event: 'Inauguration Ceremony', desc: 'Welcome address by KMCC leadership' },
                                         { time: '7:30 PM', event: 'Unarv 2026 Launch', desc: 'Official commencement of the programme' },
-                                        { time: '7:45 PM', event: 'A. P. Sidhique — Act 1', desc: 'Opening medley & soulful hits' },
+                                        { time: '7:45 PM', event: 'I. P. Sidhique — Act 1', desc: 'Opening medley & soulful hits' },
                                         { time: '8:45 PM', event: 'Intermission', desc: 'Community interaction & refreshments' },
-                                        { time: '9:15 PM', event: 'A. P. Sidhique — Act 2', desc: 'Grand finale performance' },
+                                        { time: '9:15 PM', event: 'I. P. Sidhique — Act 2', desc: 'Grand finale performance' },
                                         { time: '10:30 PM', event: 'Vote of Thanks', desc: 'Programme concludes' },
                                     ].map((item, idx) => (
                                         <div key={idx} className="relative pb-8 last:pb-0">
@@ -99,19 +99,17 @@ const EventDetails = () => {
                                 </div>
                             </div>
 
-                            {/* Map placeholder styled */}
-                            <div className="islamic-card h-48 relative flex items-center justify-center bg-slate-50 overflow-hidden">
-                                <div className="absolute inset-0 pattern-bg-light opacity-50"></div>
-                                <div className="relative text-center text-slate-400">
-                                    <Navigation className="w-10 h-10 mx-auto mb-2 text-gold" />
-                                    <p className="font-bold text-primary">KMCC Riyadh – Thavanur Hall</p>
-                                    <p className="text-sm">Kingdom of Saudi Arabia</p>
-                                </div>
-                                <div className="absolute bottom-4 right-4">
-                                    <button className="bg-primary text-gold text-sm px-5 py-2 rounded-full font-bold border border-gold/20">
-                                        Open Maps
-                                    </button>
-                                </div>
+                            {/* Map */}
+                            <div className="islamic-card h-96 relative flex items-center justify-center bg-slate-50 overflow-hidden p-0">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3626.500722274202!2d46.71392947514467!3d24.640887378073266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f05007fcfb91f%3A0x4329e6fcb2cf79e1!2sDimora%20Hotel%20Riyadh!5e0!3m2!1sen!2sin!4v1771529463556!5m2!1sen!2sin"
+                                    width="100%"
+                                    height="100%"
+                                    style={{ border: 0 }}
+                                    allowFullScreen=""
+                                    loading="lazy"
+                                    referrerPolicy="no-referrer-when-downgrade"
+                                ></iframe>
                             </div>
                         </div>
                     </div>
