@@ -195,7 +195,7 @@ const Home = () => {
                         {[
                             { icon: <Calendar size={24} />, label: 'Date', value: '21 March 2026' },
                             { icon: <Clock size={24} />, label: 'Time', value: '7:00 PM' },
-                            { icon: <MapPin size={24} />, label: 'Venue', value: 'Demora Hotel, Riyadh - batha' },
+                            { icon: <MapPin size={24} />, label: 'Venue', value: 'Demora palace auditorium, Riyadh - batha' },
                             { icon: <Mic size={24} />, label: 'Performer', value: 'I. P. Sidhique' },
                         ].map(({ icon, label, value }, i) => (
                             <div key={i} style={{
