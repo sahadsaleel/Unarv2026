@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import { Menu, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
+import logo2 from '../assets/logo2.jpeg'
 
 const NAV_GOLD = '#c8a84b'
 const NAV_DARK = '#0d1f17'
@@ -54,21 +55,11 @@ const Navbar = () => {
 
                     {/* ── Logo (no star icon) ── */}
                     <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '10px', textDecoration: 'none' }}>
-                        {/* Small crescent badge instead of star */}
-                        <div style={{
-                            width: '38px', height: '38px', borderRadius: '10px',
-                            background: `linear-gradient(135deg, ${NAV_PRIMARY}, #2d6645)`,
-                            border: `1px solid rgba(200,168,75,0.35)`,
-                            display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0,
-                        }}>
-                            <svg viewBox="0 0 32 32" width="22" height="22">
-                                <path
-                                    d="M16 4 C10 4 5 9 5 15 C5 21 10 26 16 26 C19 26 21.5 25 23.5 23.2 C20.5 23.2 16 21 16 15 C16 8.5 20.8 5.5 26 4.5 C23.5 4.2 20 4 16 4Z"
-                                    fill={NAV_GOLD}
-                                />
-                                <polygon points="25,3 26.5,8 32,8 27.5,11 29,16 25,13 21,16 22.5,11 18,8 23.5,8" fill={NAV_GOLD} />
-                            </svg>
-                        </div>
+                        <img
+                            src={logo2}
+                            alt="Unarv 2026 Logo"
+                            style={{ width: '45px', height: '45px', objectFit: 'contain' }}
+                        />
                         <div>
                             <div style={{ color: NAV_GOLD, fontFamily: "'Amiri', serif", fontWeight: 700, fontSize: '20px', lineHeight: 1 }}>
                                 Unarv 2026

@@ -11,6 +11,7 @@ import sponcer2 from '../assets/sponcer2.jpg'
 import sponcer3 from '../assets/sponcer3.jpg'
 import sponcer4 from '../assets/sponcer4.jpg'
 import sponcer5 from '../assets/sponcer5.jpg'
+import sponcer6 from '../assets/sponcer6.jpg'
 
 /* ─── Reusable small components ─── */
 const GoldStar = ({ size = 20 }) => (
@@ -92,7 +93,7 @@ const Home = () => {
                         }}>
                             <GoldStar size={16} />
                             <span style={{ color: '#c8a84b', fontSize: '12px', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase' }}>
-                                KMCC Riyadh Presents
+                                KMCC Riyadh Thavanur Constituency Committee Presents
                             </span>
                             <GoldStar size={16} />
                         </div>
@@ -128,7 +129,7 @@ const Home = () => {
                         {[
                             { icon: <Calendar size={15} />, text: '21 March 2026 · Saturday' },
                             { icon: <Clock size={15} />, text: '7:00 PM' },
-                            { icon: <MapPin size={15} />, text: 'Dimora Hotel, Riyadh' },
+                            { icon: <MapPin size={15} />, text: 'Demora Palace auditorium, Riyadh - batha' },
                         ].map(({ icon, text }, i) => (
                             <div key={i} style={{
                                 display: 'flex', alignItems: 'center', gap: '8px',
@@ -279,7 +280,7 @@ const Home = () => {
                     <motion.div {...fadeUp()}>
                         <p style={{ color: '#c8a84b', fontWeight: 700, fontSize: '12px', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '16px' }}>Featured Artist</p>
                         <h2 style={{ fontFamily: "'Amiri', serif", color: 'white', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 700, margin: '0 0 8px 0' }}>I. P. Sidhique</h2>
-                        <p style={{ color: 'rgba(200,168,75,0.6)', fontFamily: "'Noto Sans Malayalam', sans-serif", marginBottom: '24px', fontSize: '18px' }}>ഏ. പി. സിദ്ദീഖ്</p>
+                        <p style={{ color: 'rgba(200,168,75,0.6)', fontFamily: "'Noto Sans Malayalam', sans-serif", marginBottom: '24px', fontSize: '18px' }}>ഐ. പി. സിദ്ദീഖ്</p>
                         <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '16px', lineHeight: 1.8, marginBottom: '32px', maxWidth: '480px' }}>
                             A household name among Malayalam music lovers, I. P. Sidhique's powerful vocals and emotional depth have captivated audiences across the Middle East and beyond. Unarv 2026 will be his most intimate performance yet in Riyadh.
                         </p>
@@ -403,7 +404,7 @@ const Home = () => {
                         </div>
 
                         {/* New Sponsors */}
-                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5].map((img, i) => (
+                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5, sponcer6].map((img, i) => (
                             <div key={i} style={{ background: 'white', padding: '12px', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.2)' }}>
                                 <img
                                     src={img}

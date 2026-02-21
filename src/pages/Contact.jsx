@@ -64,7 +64,7 @@ const Contact = () => {
                             {
                                 icon: <MapPin size={28} />,
                                 title: 'Address',
-                                lines: ['Dimora Hotel, Riyadh', 'Kingdom of Saudi Arabia'],
+                                lines: ['Demora Palace auditorium, Riyadh - Batha'],
                             },
                             {
                                 icon: <Phone size={28} />,

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Phone, Mail, MapPin, Instagram, Facebook, Youtube } from 'lucide-react'
-import sponsorLogo from '../assets/images1.jpg'
+import logo1 from '../assets/logo1.jpeg'
+import logo2 from '../assets/logo2.jpeg'
 
 const GOLD = '#c8a84b'
 const DARK = '#0d1f17'
@@ -26,17 +27,11 @@ const Footer = () => {
                     {/* Brand — crescent badge instead of star */}
                     <div>
                         <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '20px' }}>
-                            <div style={{
-                                width: '40px', height: '40px', borderRadius: '10px', flexShrink: 0,
-                                background: `linear-gradient(135deg, ${PRIMARY}, #2d6645)`,
-                                border: `1px solid rgba(200,168,75,0.35)`,
-                                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                            }}>
-                                <svg viewBox="0 0 32 32" width="22" height="22">
-                                    <path d="M16 4 C10 4 5 9 5 15 C5 21 10 26 16 26 C19 26 21.5 25 23.5 23.2 C20.5 23.2 16 21 16 15 C16 8.5 20.8 5.5 26 4.5 C23.5 4.2 20 4 16 4Z" fill={GOLD} />
-                                    <polygon points="25,3 26.5,8 32,8 27.5,11 29,16 25,13 21,16 22.5,11 18,8 23.5,8" fill={GOLD} />
-                                </svg>
-                            </div>
+                            <img
+                                src={logo2}
+                                alt="Unarv 2026 Logo"
+                                style={{ width: '45px', height: '45px', objectFit: 'contain' }}
+                            />
                             <div>
                                 <div style={{ color: GOLD, fontFamily: "'Amiri', serif", fontWeight: 700, fontSize: '20px', lineHeight: 1 }}>Unarv 2026</div>
                                 <div style={{ color: 'rgba(200,168,75,0.4)', fontSize: '10px', letterSpacing: '0.2em', textTransform: 'uppercase', marginTop: '3px' }}>KMCC Riyadh</div>
@@ -45,6 +40,13 @@ const Footer = () => {
                         <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '14px', lineHeight: 1.7, marginBottom: '20px' }}>
                             A grand cultural evening honoring our community spirit, organized by KMCC Thavanur Constituency, Riyadh.
                         </p>
+                        <div style={{ marginBottom: '24px' }}>
+                            <img
+                                src={logo1}
+                                alt="Unarv 2026 Full Logo"
+                                style={{ width: '100%', maxWidth: '200px', height: 'auto', borderRadius: '8px' }}
+                            />
+                        </div>
                         <div style={{ display: 'flex', gap: '10px' }}>
                             {[Instagram, Facebook, Youtube].map((Icon, i) => (
                                 <a key={i} href="#" style={{
@@ -83,7 +85,7 @@ const Footer = () => {
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
                             <li style={{ display: 'flex', gap: '10px', alignItems: 'flex-start' }}>
                                 <MapPin size={15} style={{ color: GOLD, marginTop: '2px', flexShrink: 0 }} />
-                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', lineHeight: 1.5 }}>Dimora Hotel, Riyadh, Kingdom of Saudi Arabia</span>
+                                <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: '13px', lineHeight: 1.5 }}>Demora Palace auditorium, Riyadh - Batha</span>
                             </li>
                             <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                                 <Phone size={15} style={{ color: GOLD, flexShrink: 0 }} />

@@ -39,7 +39,7 @@ const EventDetails = () => {
                                 {
                                     Icon: MapPin,
                                     title: 'Where',
-                                    lines: ['Dimora Hotel, Riyadh', 'Kingdom of Saudi Arabia']
+                                    lines: ['Demora Palace auditorium, Riyadh - Batha']
                                 },
                             ].map(({ Icon, title, lines }, i) => (
                                 <motion.div

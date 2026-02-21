@@ -9,6 +9,7 @@ import sponcer2 from '../assets/sponcer2.jpg'
 import sponcer3 from '../assets/sponcer3.jpg'
 import sponcer4 from '../assets/sponcer4.jpg'
 import sponcer5 from '../assets/sponcer5.jpg'
+import sponcer6 from '../assets/sponcer6.jpg'
 
 const StarSvg = ({ className }) => (
     <svg viewBox="0 0 40 40" className={className}>
@@ -59,7 +60,7 @@ const Sponsors = () => {
                         </motion.div>
 
                         {/* Other Sponsors (Now Big) */}
-                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5].map((img, i) => (
+                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5, sponcer6].map((img, i) => (
                             <motion.div
                                 key={i}
                                 initial={{ opacity: 0, y: 20 }}
