@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { Calendar, Clock, MapPin, Music, Star, Users, ChevronRight, Mic, Globe, Heart } from 'lucide-react'
 import { Link } from 'react-router-dom'
@@ -36,8 +36,34 @@ const fadeUp = (delay = 0) => ({
     transition: { duration: 0.6, delay },
 })
 
+/* ─── Countdown hook ─── */
+function useCountdown(targetDate) {
+    const [timeLeft, setTimeLeft] = useState(() => calcTime(targetDate))
+
+    function calcTime(target) {
+        const diff = target - Date.now()
+        if (diff <= 0) return { days: 0, hours: 0, minutes: 0, seconds: 0 }
+        return {
+            days: Math.floor(diff / (1000 * 60 * 60 * 24)),
+            hours: Math.floor((diff / (1000 * 60 * 60)) % 24),
+            minutes: Math.floor((diff / (1000 * 60)) % 60),
+            seconds: Math.floor((diff / 1000) % 60),
+        }
+    }
+
+    useEffect(() => {
+        const id = setInterval(() => setTimeLeft(calcTime(targetDate)), 1000)
+        return () => clearInterval(id)
+    }, [targetDate])
+
+    return timeLeft
+}
+
 /* ─── Main Page ─── */
 const Home = () => {
+    // 21 March 2026 19:00 Arabia Standard Time (UTC+3)
+    const EVENT_DATE = new Date('2026-03-21T19:00:00+03:00').getTime()
+    const countdown = useCountdown(EVENT_DATE)
     return (
         <div style={{ background: '#fdf6e3' }}>
 
@@ -93,7 +119,7 @@ const Home = () => {
                         }}>
                             <GoldStar size={16} />
                             <span style={{ color: '#c8a84b', fontSize: '12px', fontWeight: 700, letterSpacing: '0.25em', textTransform: 'uppercase' }}>
-                                KMCC Riyadh Thavanur Constituency Committee Presents
+                                Riyadh KMCC – Thavanur Constituency Committee Presents
                             </span>
                             <GoldStar size={16} />
                         </div>
@@ -129,7 +155,7 @@ const Home = () => {
                         {[
                             { icon: <Calendar size={15} />, text: '21 March 2026 · Saturday' },
                             { icon: <Clock size={15} />, text: '7:00 PM' },
-                            { icon: <MapPin size={15} />, text: 'Demora Palace auditorium, Riyadh - batha' },
+                            { icon: <MapPin size={15} />, text: 'Demora Palace auditorium, Riyadh - Batha' },
                         ].map(({ icon, text }, i) => (
                             <div key={i} style={{
                                 display: 'flex', alignItems: 'center', gap: '8px',
@@ -154,6 +180,63 @@ const Home = () => {
                             I. P. Sidhique
                         </h2>
                         <p style={{ color: '#c8a84b', fontSize: '14px', fontWeight: 600 }}>Renowned Malayalam Singer</p>
+                    </motion.div>
+
+                    {/* ── Countdown ── */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.75 }}
+                        style={{ marginBottom: '40px' }}
+                    >
+                        <p style={{
+                            color: 'rgba(255,255,255,0.35)', fontSize: '11px',
+                            letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '16px',
+                        }}>
+                            Event Starts In
+                        </p>
+                        <div style={{
+                            display: 'flex', justifyContent: 'center', gap: '12px', flexWrap: 'wrap',
+                        }}>
+                            {[
+                                { value: countdown.days, label: 'Days' },
+                                { value: countdown.hours, label: 'Hours' },
+                                { value: countdown.minutes, label: 'Minutes' },
+                            ].map(({ value, label }, i) => (
+                                <div key={i} style={{
+                                    display: 'flex', flexDirection: 'column', alignItems: 'center',
+                                    background: 'rgba(255,255,255,0.05)',
+                                    border: '1px solid rgba(200,168,75,0.3)',
+                                    borderRadius: '16px',
+                                    padding: '18px 28px',
+                                    minWidth: '90px',
+                                    backdropFilter: 'blur(8px)',
+                                }}>
+                                    <span style={{
+                                        fontFamily: "'Amiri', serif",
+                                        fontSize: 'clamp(36px, 7vw, 52px)',
+                                        fontWeight: 900,
+                                        lineHeight: 1,
+                                        background: 'linear-gradient(135deg, #c8a84b 0%, #f5d78e 60%, #c8a84b 100%)',
+                                        WebkitBackgroundClip: 'text',
+                                        WebkitTextFillColor: 'transparent',
+                                        backgroundClip: 'text',
+                                        display: 'block',
+                                        minWidth: '2ch',
+                                        textAlign: 'center',
+                                    }}>
+                                        {String(value).padStart(2, '0')}
+                                    </span>
+                                    <span style={{
+                                        color: 'rgba(255,255,255,0.4)',
+                                        fontSize: '10px',
+                                        letterSpacing: '0.2em',
+                                        textTransform: 'uppercase',
+                                        marginTop: '6px',
+                                    }}>
+                                        {label}
+                                    </span>
+                                </div>
+                            ))}
+                        </div>
                     </motion.div>
 
                     {/* CTAs
@@ -195,7 +278,7 @@ const Home = () => {
                         {[
                             { icon: <Calendar size={24} />, label: 'Date', value: '21 March 2026' },
                             { icon: <Clock size={24} />, label: 'Time', value: '7:00 PM' },
-                            { icon: <MapPin size={24} />, label: 'Venue', value: 'Demora palace auditorium, Riyadh - batha' },
+                            { icon: <MapPin size={24} />, label: 'Venue', value: 'Demora Palace auditorium, Riyadh - Batha' },
                             { icon: <Mic size={24} />, label: 'Performer', value: 'I. P. Sidhique' },
                         ].map(({ icon, label, value }, i) => (
                             <div key={i} style={{
@@ -224,15 +307,15 @@ const Home = () => {
                         </h2>
                         <GoldDivider />
                         <p style={{ color: '#6b7280', fontSize: '17px', lineHeight: 1.8, maxWidth: '640px', margin: '0 auto' }}>
-                            Unarv 2026 is a grand cultural evening celebrating the Malayali spirit in the heart of Riyadh, brought to you by the KMCC Thavanur Constituency Committee.
+                            Unarv 2026 celebrates the Malayali spirit in the heart of Riyadh, proudly presented by the Riyadh KMCC – Thavanur Constituency Committee.
                         </p>
                     </motion.div>
 
                     <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
                         {[
-                            { icon: <Music size={32} />, title: 'Live Melodies', body: 'Soul-stirring Malayalam hits performed live by the maestro I. P. Sidhique in one magical evening.' },
-                            { icon: <Users size={32} />, title: 'Community Spirit', body: 'Come together with the Malayali diaspora of Riyadh in a powerful celebration of heritage and belonging.' },
-                            { icon: <Star size={32} />, title: 'Cultural Heritage', body: 'A curated programme blending devotional music, folk classics, and contemporary hits in an elegant setting.' },
+                            { icon: <Music size={32} />, title: 'Live Melodies', body: 'Soul-stirring Malayalam hits by the maestro I. P. Sidhique for one magical evening.' },
+                            { icon: <Users size={32} />, title: 'Community Spirit', body: 'Unite with the Malayali diaspora in Riyadh for a meaningful celebration of heritage and belonging.' },
+                            { icon: <Star size={32} />, title: 'Cultural Heritage', body: 'Experience a curated programme that blends devotional music, folk classics, and contemporary hits in an elegant setting.' },
                         ].map(({ icon, title, body }, i) => (
                             <motion.div key={i} {...fadeUp(i * 0.15)}
                                 style={{
@@ -272,7 +355,7 @@ const Home = () => {
                         <h2 style={{ fontFamily: "'Amiri', serif", color: 'white', fontSize: 'clamp(36px, 5vw, 56px)', fontWeight: 700, margin: '0 0 8px 0' }}>I. P. Sidhique</h2>
                         <p style={{ color: 'rgba(200,168,75,0.6)', fontFamily: "'Noto Sans Malayalam', sans-serif", marginBottom: '24px', fontSize: '18px' }}>ഐ. പി. സിദ്ദീഖ്</p>
                         <p style={{ color: 'rgba(255,255,255,0.65)', fontSize: '16px', lineHeight: 1.8, marginBottom: '32px', maxWidth: '480px' }}>
-                            A household name among Malayalam music lovers, I. P. Sidhique's powerful vocals and emotional depth have captivated audiences across the Middle East and beyond. Unarv 2026 will be his most intimate performance yet in Riyadh.
+                            A household name among Malayalam music lovers, his powerful vocals and emotional depth have captivated audiences across the Middle East and beyond. Unarv 2026 marks his most intimate performance yet in Riyadh.
                         </p>
                         <div style={{ display: 'flex', gap: '32px', marginBottom: '36px' }}>
                             {[{ n: '1000+', l: 'Performances' }, { n: '15+', l: 'Countries' }, { n: '50+', l: 'Awards' }].map(({ n, l }, i) => (
@@ -341,15 +424,12 @@ const Home = () => {
                         <p style={{ color: '#c8a84b', fontWeight: 700, fontSize: '12px', letterSpacing: '0.25em', textTransform: 'uppercase', marginBottom: '12px' }}>
                             Organized by
                         </p>
-                        <h3 style={{ fontFamily: "'Amiri', serif", color: '#1a3a2a', fontSize: '36px', fontWeight: 700, margin: '0 0 4px 0' }}>
-                            Riyadh KMCC
+                        <h3 style={{ fontFamily: "'Amiri', serif", color: '#1a3a2a', fontSize: '32px', fontWeight: 700, margin: '0 0 12px 0' }}>
+                            Riyadh KMCC – Thavanur Constituency Committee
                         </h3>
-                        <p style={{ color: '#c8a84b', fontWeight: 600, fontSize: '15px', marginBottom: '20px', letterSpacing: '0.05em' }}>
-                            Thavanur Constituency Committee
-                        </p>
                         <GoldDivider />
                         <p style={{ color: '#6b7280', fontSize: '16px', lineHeight: 1.8, margin: '20px 0 32px' }}>
-                            Committed to preserving the cultural identity of the Malayali community in Saudi Arabia through impactful events, social welfare, and community development initiatives.
+                            Dedicated to preserving the cultural identity of the Malayali community in Saudi Arabia through impactful cultural events, social welfare programs, and community development initiatives.
                         </p>
                         <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap' }}>
                             <Link to="/about" style={{
