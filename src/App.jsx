@@ -8,6 +8,7 @@ import Artist from './pages/Artist'
 import EventDetails from './pages/EventDetails'
 import Sponsors from './pages/Sponsors'
 import Contact from './pages/Contact'
+import Committee from './pages/Committee'
 
 function App() {
     return (
@@ -21,6 +22,7 @@ function App() {
                     <Route path="/details" element={<EventDetails />} />
                     <Route path="/sponsors" element={<Sponsors />} />
                     <Route path="/contact" element={<Contact />} />
+                    <Route path="/committee" element={<Committee />} />
                 </Routes>
             </main>
             <Footer />

@@ -14,6 +14,7 @@ const navLinks = [
     { name: 'Artist', path: '/artist' },
     { name: 'Details', path: '/details' },
     { name: 'Sponsors', path: '/sponsors' },
+    { name: 'Committee', path: '/committee' },
     { name: 'Contact', path: '/contact' },
 ]
 
