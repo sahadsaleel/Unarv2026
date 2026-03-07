@@ -68,7 +68,7 @@ const Footer = () => {
                         <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
                             {[
                                 ['/', 'Home'], ['/about', 'About'], ['/artist', 'Artist'],
-                                ['/details', 'Event Details'], ['/sponsors', 'Sponsors'], ['/contact', 'Contact'],
+                                ['/details', 'Event Details'], ['/sponsors', 'Sponsors'], ['/committee', 'Committee'], ['/contact', 'Contact'],
                             ].map(([path, label]) => (
                                 <li key={path}>
                                     <Link to={path} style={{ color: 'rgba(255,255,255,0.5)', textDecoration: 'none', fontSize: '14px', display: 'flex', alignItems: 'center', gap: '6px' }}>

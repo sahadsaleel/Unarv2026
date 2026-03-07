@@ -14,6 +14,7 @@ import sponcer5 from '../assets/sponcer5.jpg'
 import sponcer6 from '../assets/sponcer6.jpg'
 import sponcer7 from '../assets/sponcer7.jpg'
 import sponcer8 from '../assets/sponcer8.jpg'
+import sponcer9 from '../assets/sponcer9.jpg'
 
 /* ─── Reusable small components ─── */
 const GoldStar = ({ size = 20 }) => (
@@ -476,7 +477,7 @@ const Home = () => {
                         </div>
 
                         {/* New Sponsors */}
-                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5, sponcer6, sponcer7, sponcer8].map((img, i) => (
+                        {[sponcer1, sponcer2, sponcer3, sponcer4, sponcer5, sponcer6, sponcer7, sponcer8, sponcer9].map((img, i) => (
                             <div key={i} style={{ background: 'white', padding: '12px', borderRadius: '16px', boxShadow: '0 4px 16px rgba(0,0,0,0.2)' }}>
                                 <img
                                     src={img}
